@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 59 130 246;
+  }
+
+  body {
+    @apply antialiased bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+  
+  .input-range {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+  }
+  
+  .input-range::-webkit-slider-thumb {
+    @apply w-4 h-4 bg-blue-500 rounded-full appearance-none;
+  }
+  
+  .dropzone {
+    @apply border-2 border-dashed border-gray-300 rounded-lg p-6 transition-colors duration-200;
+  }
+  
+  .dropzone-active {
+    @apply border-blue-400 bg-blue-50;
+  }
+}
